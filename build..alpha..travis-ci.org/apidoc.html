@@ -1,0 +1,179 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/petehunt/jsx-loader"
+
+    >jsx-loader (v0.13.2)</a>
+</h1>
+<h4>JSX loader for webpack</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsx-loader">module jsx-loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsx-loader.jsx-loader">
+            function <span class="apidocSignatureSpan"></span>jsx-loader
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsx-loader.toString">
+            function <span class="apidocSignatureSpan">jsx-loader.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsx-loader.toString">module jsx-loader.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsx-loader.toString.toString">
+            function <span class="apidocSignatureSpan">jsx-loader.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsx-loader" id="apidoc.module.jsx-loader">module jsx-loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsx-loader.jsx-loader" id="apidoc.element.jsx-loader.jsx-loader">
+        function <span class="apidocSignatureSpan"></span>jsx-loader
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jsx-loader = function (source) {
+  this.cacheable &#x26;&#x26; this.cacheable();
+
+  var sourceFilename = loaderUtils.getRemainingRequest(this);
+  var current = loaderUtils.getCurrentRequest(this);
+
+  var query = loaderUtils.parseQuery(this.query);
+  if (query.insertPragma) {
+    source = &#x27;/** @jsx &#x27; + query.insertPragma + &#x27; */&#x27; + source;
+  }
+
+  var transform = jstransform.transform(source, {
+    react: true,
+    harmony: query.harmony,
+    stripTypes: query.stripTypes,
+    es5: query.es5,
+    sourceMap: this.sourceMap
+  });
+  if (transform.sourceMap) {
+    transform.sourceMap.sources = [sourceFilename];
+    transform.sourceMap.file = current;
+    transform.sourceMap.sourcesContent = [source];
+  }
+  this.callback(null, transform.code, transform.sourceMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsx-loader.toString" id="apidoc.element.jsx-loader.toString">
+        function <span class="apidocSignatureSpan">jsx-loader.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsx-loader.toString" id="apidoc.module.jsx-loader.toString">module jsx-loader.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsx-loader.toString.toString" id="apidoc.element.jsx-loader.toString.toString">
+        function <span class="apidocSignatureSpan">jsx-loader.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
