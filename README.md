@@ -1,4 +1,7 @@
-# api documentation for  [jsx-loader (v0.13.2)](https://github.com/petehunt/jsx-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsx-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsx-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsx-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsx-loader)
+# npmdoc-jsx-loader
+
+#### basic api documentation for  [jsx-loader (v0.13.2)](https://github.com/petehunt/jsx-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsx-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsx-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsx-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsx-loader)
+
 #### JSX loader for webpack
 
 [![NPM](https://nodei.co/npm/jsx-loader.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/jsx-loader)
@@ -57,7 +60,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "0.13.2"
+    "version": "0.13.2",
+    "bin": {}
 }
 ```
 
